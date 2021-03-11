@@ -9,18 +9,38 @@ import XCTest
 @testable import HowToSnapshotCell
 
 class MySnapShotTests: XCTestCase {
-    func test__snapShot() {
-        //
+    func test__snapShot() throws {
+        let window = UIWindow(frame: .zero)
+    
         let sut = ViewController()
-        sut.loadViewIfNeeded() // simulate view did load
-        sut.tableView.reloadData() // simulate data source get called
         
-        //
+        window.rootViewController = sut
+        
+        window.isHidden = false
+        
+        window.makeKeyAndVisible()
+        
+        sut.loadViewIfNeeded() // simulate view did load
+        
+        //sut.tableView.reloadData() // simulate data source get called
+        
+        RunLoop.main.run(until: Date())
+        
         sut.switchBtn.setOn(true, animated: false) //simulate user toggle a `UISwitch` instance which is a subview of sut.view as ON
         
-        (sut.tableView
-            .cellForRow(at: IndexPath(row: 0, section: 0)) as! SwitchCell)
-            .switchBtn.setOn(true, animated: false) //simulate user toggle a `UISwitch` instance which is a subview of `SwitchCell` as ON
+        let cell = try XCTUnwrap(sut.tableView
+                                    .cellForRow(at: IndexPath(row: 0, section: 0)))
+        
+        let switchCell = try XCTUnwrap(cell as? SwitchCell)
+        
+        //switchCell.switchBtn.setOn(true, animated: false)
+        switchCell.switchBtn.isOn = true
+        
+        RunLoop.main.run(until: Date())
+        
+        print("!!!! cell in test case: \(cell)")
+        
+        XCTAssertTrue(switchCell.switchBtn.isOn)
         
         // only the first `UISwitch` instance is ON, but I expect both of them is ON
         recordSnapShot(

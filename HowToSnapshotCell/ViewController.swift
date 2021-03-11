@@ -40,6 +40,8 @@ public class ViewController: UIViewController, UITableViewDataSource {
         tableView.frame = CGRect(x: 0, y: 160, width: 200, height: 200)
         tableView.dataSource = self
         view.addSubview(tableView)
+        
+        tableView.register(SwitchCell.self, forCellReuseIdentifier: "SwitchCell")
     }
     
     public override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +53,12 @@ public class ViewController: UIViewController, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return SwitchCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath)
+        
+        print("!!!!~ cell in data source case: \(cell)")
+        
+        return cell
     }
     
 }

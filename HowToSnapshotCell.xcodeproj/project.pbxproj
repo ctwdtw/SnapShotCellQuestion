@@ -14,7 +14,7 @@
 		631CC65625FA41AF00866FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631CC65525FA41AF00866FF2 /* Assets.xcassets */; };
 		631CC65925FA41AF00866FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631CC65725FA41AF00866FF2 /* LaunchScreen.storyboard */; };
 		631CC66425FA41AF00866FF2 /* HowToSnapshotCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631CC66325FA41AF00866FF2 /* HowToSnapshotCellTests.swift */; };
-		631CC68525FA42FE00866FF2 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 631CC68425FA42FE00866FF2 /* switch.png */; };
+		631CC68D25FA580E00866FF2 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 631CC68C25FA580E00866FF2 /* switch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		631CC65F25FA41AF00866FF2 /* HowToSnapshotCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowToSnapshotCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		631CC66325FA41AF00866FF2 /* HowToSnapshotCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToSnapshotCellTests.swift; sourceTree = "<group>"; };
 		631CC66525FA41AF00866FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		631CC68425FA42FE00866FF2 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = switch.png; path = snapshots/switch.png; sourceTree = "<group>"; };
+		631CC68C25FA580E00866FF2 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = switch.png; path = snapshots/switch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		631CC66225FA41AF00866FF2 /* HowToSnapshotCellTests */ = {
 			isa = PBXGroup;
 			children = (
-				631CC68425FA42FE00866FF2 /* switch.png */,
+				631CC68C25FA580E00866FF2 /* switch.png */,
 				631CC66325FA41AF00866FF2 /* HowToSnapshotCellTests.swift */,
 				631CC66525FA41AF00866FF2 /* Info.plist */,
 			);
@@ -192,7 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				631CC68525FA42FE00866FF2 /* switch.png in Resources */,
+				631CC68D25FA580E00866FF2 /* switch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
